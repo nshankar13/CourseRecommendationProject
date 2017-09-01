@@ -20,8 +20,8 @@ browser.get('https://fed.princeton.edu/cas/login?locale=en&service=http%3A%2F%2F
 username = browser.find_element_by_id("username")
 password = browser.find_element_by_id("password")
 
-username.send_keys("nshankar")
-password.send_keys("Nanobiotechnology13!")
+username.send_keys("*********")
+password.send_keys("**********")
 
 browser.find_element_by_name("submit").click()
 

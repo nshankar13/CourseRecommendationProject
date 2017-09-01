@@ -5,4 +5,6 @@ with selenium webdriver
 Implements binary search to locate elements within the dataset, and sorts with various types of comparator objects (compare based on the
 different rating criteria)
 
+Output data as CSV and export again as txt file
+
 Note: needs StdIn class to read in values. 

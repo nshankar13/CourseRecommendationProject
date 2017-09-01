@@ -28,6 +28,7 @@ public class CourseSorter
         return inDept;
     } 
     
+    // for testing purposes
     public static void main(String[] args)
     {
         /*
@@ -109,8 +110,7 @@ public class CourseSorter
         StdOut.println(BinarySearchCourses.firstIndexOfDept(courseArray, "Architecture", deptComparison));
         StdOut.println(BinarySearchCourses.lastIndexOfDept(courseArray, "Architecture", deptComparison));
         */
-        
-        //CollegeCourse[] aasCourses = sorter.allCoursesInDept("African-American-Studies");
+       
         CollegeCourse[] econCourses = sorter.allCoursesInDept("Economics");
         
         //StdOut.println(BinarySearchCourses.firstIndexOfDept(courseArray, 

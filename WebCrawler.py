@@ -10,10 +10,6 @@ import pdb
 from urllib.parse import urljoin
 import csv
 
-#chromedriver = 'C:\\chromedriver.exe'
-#browser = webdriver.Chrome('C:/Users/nshankar13/Documents/Movie Recommendations Project/chromedriver_win32')
-#browser.get('https://fed.princeton.edu/cas/login?locale=en&service=http%3A%2F%2Frecal.io%2Flogin%2F%3Fnext%3D%252F')
-
 browser = webdriver.Firefox(executable_path='C:/Users/nshankar13/Documents/Movie Recommendations Project/geckodriver-v0.18.0-win64/geckodriver.exe')
 browser.get('https://fed.princeton.edu/cas/login?locale=en&service=http%3A%2F%2Frecal.io%2Flogin%2F%3Fnext%3D%252F')
 
@@ -31,7 +27,7 @@ browser.get("http://recal.io/")
 
 time.sleep(5)
 
-# one segment of the stringarray of courses. 
+# one segment of large array of all course names 
 stringArray = ["AAS 201", "AAS 245", "AAS 353", "AAS 367", "AAS 316", "AAS 256", "AFS 407", "AFS 313", "AFS 262", 
 "AMS 390", "AMS 399", "AMS 336", "AMS 370", "AMS 391", "AMS 341", "ANT 201", "ANT 208", "ANT 309A", "ANT 309B", 
 "ANT 385", "ANT 380", "AOS 527", "AOS 571", "AOS 563", "APC 503", "APC 524", "APC 502", "APC 192", "APC 321",
@@ -89,17 +85,6 @@ with open('ratingDataLectures.csv', 'w', newline='') as fp:
             a.writerows([[s, lectureRating, preceptRating, readingRating, papersRating, overallRating, feedbackRating]])
         except NoSuchElementException: 
             browser.get("https://reg-captiva.princeton.edu/chart/search.php")
-
-
-
-
-#browser.implicitly_wait(10)
- #       urlPrev = browser.current_url
-  #      browser.switch_to_frame(browser.find_element_by_id("courseEvaluation"))
-   #     src = browser.find_element_by_id("courseEvaluation").get_attribute("src")
-    #    url = urljoin(urlPrev, src)
-     #   browser.get(url)
-      #  time.sleep(5)
 
 
 

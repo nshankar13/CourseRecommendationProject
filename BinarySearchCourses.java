@@ -10,7 +10,7 @@ public class BinarySearchCourses
         int low = 0;
         int high = a.length - 1;
         int mid = (low + high) / 2;
-        int lowest = Integer.MAX_VALUE;
+        int lowest = -1;
         String midDept;
         int comparison;
         
@@ -34,23 +34,13 @@ public class BinarySearchCourses
             }
             else
             {
-                if (lowest > mid)
-                {
-                    lowest = mid;
-                }
+                lowest = mid;
                 high = mid - 1;
             }
-            mid = (int)((high + low) / 2);
+            mid = ((high + low) / 2);
         }
         
-        if (lowest != Integer.MAX_VALUE)
-        {
-            return lowest;
-        }
-        else
-        {
-            return -1;
-        }
+       return lowest;
     }
     
     // Returns the index of the last key in a[] that equals the search key, or -1 if no such key.
@@ -60,7 +50,7 @@ public class BinarySearchCourses
         int low = 0;
         int high = a.length - 1;
         int mid = (low + high) / 2;
-        int highest = Integer.MIN_VALUE;
+        int highest = -1;
         String midDept;
         int comparison;
         
@@ -79,23 +69,13 @@ public class BinarySearchCourses
             }
             else
             {
-                if (highest < mid)
-                {
-                    highest = mid;
-                }
+                highest = mid;
                 low = mid + 1;
             }
             mid = (int)((high + low) / 2);
         }
         
-        if (highest != Integer.MIN_VALUE)
-        {
-            return highest;
-        }
-        else
-        {
-            return -1;
-        }
+      return highest;
     }
     
     
